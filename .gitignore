@@ -1,0 +1,51 @@
+# OCaml specific
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+_build/
+
+# Dream/Dune specific
+*.exe
+*.bc
+*.byte
+*.native
+.merlin
+*.install
+
+# opam local switch
+_opam/
+
+# Environment files
+.env
+.env.*
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node modules (if using any JavaScript tools)
+node_modules/
+
+# Log files
+*.log
+
+# Database files
+*.db
+*.sqlite
