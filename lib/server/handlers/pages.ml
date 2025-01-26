@@ -1,1 +1,1 @@
-let homepage _ = Dream.html "Hello World from an handler!"
+let homepage _ = Views.Pages.homepage |> Dream.html
