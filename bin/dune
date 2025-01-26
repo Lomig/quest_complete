@@ -1,4 +1,4 @@
 (executable
  (public_name quest_complete)
  (name main)
- (libraries quest_complete))
+ (libraries quest_complete dream))
