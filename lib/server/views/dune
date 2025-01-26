@@ -1,2 +1,3 @@
 (library
- (name views))
+ (name views)
+ (libraries templates))

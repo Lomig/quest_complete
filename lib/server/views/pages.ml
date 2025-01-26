@@ -1,1 +1,1 @@
-let homepage = "Hello World from a view!"
+let homepage = Templates.Pages.Homepage.render None
