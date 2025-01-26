@@ -1,1 +1,3 @@
-let routes = [ Dream.get "/" (fun _ -> Dream.html "Hello World!") ]
+open Handlers
+
+let routes = [ Dream.get "/" Pages.homepage ]
