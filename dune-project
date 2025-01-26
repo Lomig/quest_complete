@@ -5,22 +5,21 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github Lomig/quest_complete))
 
-(authors "Author Name <author@example.com>")
+(authors "Lomig <lomig@hey.com>")
 
-(maintainers "Maintainer Name <maintainer@example.com>")
+(maintainers "Lomig <lomig@hey.com>")
 
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(license GPL-3.0-only)
 
 (package
  (name quest_complete)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml)
+ (synopsis "Track and celebrate the games you’ve conquered.")
+ (description
+  "QuestComplete is your ultimate companion for tracking completed video games. Keep a record of your gaming victories, relive your favorite quests, and celebrate your progress in style. Level up your gaming organization with QuestComplete!")
+ (depends ocaml containers dream)
  (tags
-  ("add topics" "to describe" your project)))
+  ("website" "games" "completion")))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
