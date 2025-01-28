@@ -14,8 +14,6 @@ depends: [
   "ocaml"
   "containers"
   "dream"
-  "extunix"
-  "cohttp-lwt-unix"
   "odoc" {with-doc}
 ]
 build: [
@@ -33,3 +31,6 @@ build: [
   ]
 ]
 dev-repo: "git+https://github.com/Lomig/quest_complete.git"
+pin-depends: [
+  [ "reality_tailwindcss.1.0.0" "git+https://github.com/Lomig/reality_tailwindcss.git#main" ]
+]

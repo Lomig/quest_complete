@@ -3,19 +3,16 @@
  (name main)
  (libraries dream server))
 
-(executable
- (public_name tailwind_download)
- (name tailwind_download)
- (libraries extunix cohttp-lwt-unix))
+;------------------------------------------------------------------------------
+; Reality Tailwind CSS
+;------------------------------------------------------------------------------
 
 (rule
  (target tailwindcss)
- (deps
-  (:exe tailwind_download.exe))
  (action
   (progn
    (run echo "Downloading Tailwind CSS...")
-   (run ./tailwind_download.exe %{project_root}/bin)
+   (run reality_tailwindcss download %{project_root}/bin)
    (run chmod +x %{target})))
  (mode fallback))
 
