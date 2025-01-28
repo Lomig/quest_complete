@@ -14,6 +14,8 @@ depends: [
   "ocaml"
   "containers"
   "dream"
+  "extunix"
+  "cohttp-lwt-unix"
   "odoc" {with-doc}
 ]
 build: [

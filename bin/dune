@@ -2,3 +2,8 @@
  (public_name quest_complete)
  (name main)
  (libraries dream server))
+
+(executable
+ (public_name tailwind_download)
+ (name tailwind_download)
+ (libraries extunix cohttp-lwt-unix))

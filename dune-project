@@ -18,7 +18,7 @@
  (synopsis "Track and celebrate the games you’ve conquered.")
  (description
   "QuestComplete is your ultimate companion for tracking completed video games. Keep a record of your gaming victories, relive your favorite quests, and celebrate your progress in style. Level up your gaming organization with QuestComplete!")
- (depends ocaml containers dream)
+ (depends ocaml containers dream extunix cohttp-lwt-unix)
  (tags
   ("website" "games" "completion")))
 
