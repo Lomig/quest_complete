@@ -18,3 +18,24 @@
    (run ./tailwind_download.exe %{project_root}/bin)
    (run chmod +x %{target})))
  (mode fallback))
+
+(rule
+ (target application.css)
+ (deps
+  (:tailwindcss %{project_root}/bin/tailwindcss)
+  (:input %{project_root}/lib/client/stylesheets/application.css)
+  (source_tree %{project_root}/lib/client/stylesheets)
+  (source_tree %{project_root}/lib/server/templates))
+ (action
+  (chdir
+   %{project_root}/lib
+   (progn
+    (run echo "Building CSS...")
+    (ignore-outputs
+     (run
+      %{tailwindcss}
+      -i
+      %{input}
+      -o
+      %{project_root}/../../static/application.css))
+    (run cp %{project_root}/../../static/application.css %{target})))))

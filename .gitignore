@@ -49,3 +49,7 @@ node_modules/
 # Database files
 *.db
 *.sqlite
+
+# Generated files
+static/application.css
+
