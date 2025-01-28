@@ -7,3 +7,14 @@
  (public_name tailwind_download)
  (name tailwind_download)
  (libraries extunix cohttp-lwt-unix))
+
+(rule
+ (target tailwindcss)
+ (deps
+  (:exe tailwind_download.exe))
+ (action
+  (progn
+   (run echo "Downloading Tailwind CSS...")
+   (run ./tailwind_download.exe %{project_root}/bin)
+   (run chmod +x %{target})))
+ (mode fallback))
