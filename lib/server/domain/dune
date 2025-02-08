@@ -1,0 +1,5 @@
+(library
+ (name domain)
+ (libraries containers dream)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving.eq)))
