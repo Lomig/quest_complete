@@ -53,3 +53,4 @@ node_modules/
 # Generated files
 static/application.css
 
+docker-compose.yml

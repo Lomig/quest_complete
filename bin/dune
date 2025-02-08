@@ -1,7 +1,7 @@
 (executable
  (public_name quest_complete)
  (name main)
- (libraries dream server))
+ (libraries dream simple_dotenv caqti-driver-postgresql server))
 
 ;------------------------------------------------------------------------------
 ; Reality Tailwind CSS
