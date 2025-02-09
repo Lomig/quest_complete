@@ -8,3 +8,8 @@ let show request =
   | None -> Dream.empty `Not_Found
   | Some game -> game |> Views.Games.show |> Dream.html
 ;;
+
+let index request =
+  let* games = Game.all ~request () in
+  games |> Views.Games.Index.render |> Dream.html
+;;

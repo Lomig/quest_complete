@@ -74,3 +74,21 @@ let find_by_id ~request id =
   let* result = id |> find_by_id' |> Dream.sql request in
   Lwt.return result
 ;;
+
+let all ~request ?(order_by = "completion_date") ?(direction = `Desc) () =
+  let order =
+    match direction with
+    | `Asc -> order_by ^ " ASC"
+    | `Desc -> order_by ^ " DESC"
+  in
+  let open DB in
+  let open Lwt.Syntax in
+  let query = (string ->* t) "SELECT * FROM games ORDER BY ?" in
+  let all' =
+    fun (module Db : Connection) ->
+    let* games = Db.collect_list query order in
+    Caqti_lwt.or_fail games
+  in
+  let* result = all' |> Dream.sql request in
+  Lwt.return result
+;;

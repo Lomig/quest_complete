@@ -1,0 +1,19 @@
+type data =
+{ uri: string
+; title : string
+; rating : string
+; cover_url : string
+}
+
+let render data =
+<li>
+    <a href="<%s data.uri %>" class="flex items-center">
+        <img src="<%s data.cover_url %>" alt="<%s data.title %>" class="w-1/4">
+        <div>
+            <%s data.title %>
+        </div>
+        <div>
+            <%s data.rating %>
+        </div>
+    </a>
+</li>
