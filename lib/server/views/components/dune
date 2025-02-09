@@ -1,0 +1,7 @@
+(library
+ (name components)
+ (libraries containers dream)
+ (preprocess
+  (pps ppx_dream_eml)))
+
+(include_subdirs qualified)
