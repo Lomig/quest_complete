@@ -1,5 +1,0 @@
-(rule
- (targets indexGame.ml)
- (deps indexGame.eml.html)
- (action
-  (run dream_eml %{deps} --workspace %{workspace_root})))
