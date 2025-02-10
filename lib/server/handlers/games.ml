@@ -6,7 +6,7 @@ let show request =
   let* game = Game.find_by_id ~request id in
   match game with
   | None -> Dream.empty `Not_Found
-  | Some game -> game |> Views.Games.show |> Dream.html
+  | Some game -> game |> Views.Games.Show.render |> Dream.html
 ;;
 
 let index request =

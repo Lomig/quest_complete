@@ -16,5 +16,5 @@ let first_game_title (module Db : DB) =
 
 let homepage request =
   let* game_title = Dream.sql request first_game_title in
-  Views.Pages.homepage game_title |> Dream.html
+  Views.Pages.Homepage.render game_title |> Dream.html
 ;;

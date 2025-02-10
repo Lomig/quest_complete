@@ -1,0 +1,5 @@
+(library
+ (name layouts)
+ (libraries pure-html client))
+
+(include_subdirs no)
