@@ -1,0 +1,5 @@
+(library
+ (name components)
+ (libraries containers pure-html))
+
+(include_subdirs qualified)

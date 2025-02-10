@@ -22,7 +22,7 @@
   (:tailwindcss %{project_root}/bin/tailwindcss)
   (:input %{project_root}/lib/client/stylesheets/application.css)
   (source_tree %{project_root}/lib/client/stylesheets)
-  (source_tree %{project_root}/lib/server/templates))
+  (source_tree %{project_root}/lib/server/views))
  (action
   (chdir
    %{project_root}/lib

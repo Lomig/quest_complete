@@ -1,3 +1,7 @@
+(dirs :standard _components _templates)
+
 (library
  (name views)
- (libraries containers components templates domain))
+ (libraries containers templates domain pure-html components))
+
+(include_subdirs qualified)

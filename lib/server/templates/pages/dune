@@ -1,5 +1,0 @@
-(rule
- (targets homepage.ml)
- (deps homepage.eml.html)
- (action
-  (run dream_eml %{deps} --workspace %{workspace_root})))

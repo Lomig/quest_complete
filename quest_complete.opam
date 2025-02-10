@@ -15,7 +15,7 @@ depends: [
   "containers"
   "dream"
   "caqti-driver-postgresql"
-  "ppx_dream_eml"
+  "pure-html"
   "odoc" {with-doc}
 ]
 build: [

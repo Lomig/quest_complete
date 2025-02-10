@@ -1,5 +1,0 @@
-(library
- (name templates)
- (libraries dream))
-
-(include_subdirs qualified)

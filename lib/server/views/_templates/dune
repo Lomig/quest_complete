@@ -1,0 +1,7 @@
+(dirs :standard _layouts)
+
+(library
+ (name templates)
+ (libraries pure-html components layouts))
+
+(include_subdirs qualified)
