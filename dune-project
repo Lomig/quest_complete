@@ -18,7 +18,7 @@
  (synopsis "Track and celebrate the games you’ve conquered.")
  (description
   "QuestComplete is your ultimate companion for tracking completed video games. Keep a record of your gaming victories, relive your favorite quests, and celebrate your progress in style. Level up your gaming organization with QuestComplete!")
- (depends ocaml containers dream caqti-driver-postgresql ppx_dream_eml)
+ (depends ocaml containers dream caqti-driver-postgresql pure-html)
  (tags
   ("website" "games" "completion")))
 
