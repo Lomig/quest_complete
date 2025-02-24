@@ -1,4 +1,5 @@
 pin-depends: [
   [ "reality_tailwindcss.1.0.0" "git+https://github.com/Lomig/reality_tailwindcss.git#main" ]
+  [ "reality_assets.1.0.0" "git+https://github.com/Lomig/reality_assets.git#main" ]
   [ "simple_dotenv.1.0.0" "git+https://github.com/Lomig/simple_dotenv.git#main" ]
 ]

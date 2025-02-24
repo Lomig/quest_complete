@@ -51,6 +51,6 @@ node_modules/
 *.sqlite
 
 # Generated files
-static/application.css
+static/*
 
 docker-compose.yml
