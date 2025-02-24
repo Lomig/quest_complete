@@ -32,7 +32,9 @@ let extract_data_from (game : Game.t) =
 let render game =
   let data = extract_data_from game in
   Layouts.Main.layout
-    [ h1 [ class_ "text-red-800 text-4xl" ] [ txt "%s" data.title ]
+    [ h1
+        [ class_ "text-red-800 text-4xl"; string_attr "data-controller" "hello-world" ]
+        [ txt "%s" data.title ]
     ; img [ src "%s" data.cover_url; alt "%s" data.title; class_ "w-1/4" ]
     ; ul
         []

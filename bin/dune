@@ -22,7 +22,8 @@
   (:tailwindcss %{project_root}/bin/tailwindcss)
   (:input %{project_root}/lib/client/stylesheets/application.css)
   (source_tree %{project_root}/lib/client/stylesheets)
-  (source_tree %{project_root}/lib/server/views))
+  (source_tree %{project_root}/lib/server/views)
+  (source_tree %{project_root}/lib/static))
  (action
   (chdir
    %{project_root}/lib
@@ -36,3 +37,21 @@
       -o
       %{project_root}/../../static/application.css))
     (run cp %{project_root}/../../static/application.css %{target})))))
+
+;------------------------------------------------------------------------------
+; Reality Assets
+;------------------------------------------------------------------------------
+
+(rule
+ (target building_js_assets)
+ (deps
+  (source_tree %{project_root}/lib/client/javascript))
+ (action
+  (progn
+   (run echo "Building JS...")
+   (run
+    cp
+    -R
+    %{project_root}/../../lib/client/javascript/.
+    %{project_root}/../../static/)
+   (run touch building_js_assets))))
